@@ -49,4 +49,9 @@ public class Car {
 		this.price = price;
 	}
 
+	@Override
+	public String toString() {
+		String carInfo = carMake + " " + carModel + " " + Integer.toString(year) + " " + Double.toString(price);
+		return carInfo;
+	}
 }

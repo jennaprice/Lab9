@@ -82,4 +82,16 @@ public class Validator {
 		}
 		return contBoolean;
 	}
+
+	public static boolean continueProgram(Scanner sc, int runTimes, String prompt) {
+		boolean contBoolean = false;
+
+		if (runTimes != 0) {
+			String cont = getString(sc, prompt);
+			contBoolean = cont.equalsIgnoreCase("y");
+		} else {
+			contBoolean = true;
+		}
+		return contBoolean;
+	}
 }
