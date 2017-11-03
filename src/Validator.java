@@ -69,4 +69,17 @@ public class Validator {
 		}
 		return d;
 	}
+
+	// you have to initialize and update a count or your for loop will run forever
+	public static boolean continueProgram(Scanner sc, int runTimes) {
+		boolean contBoolean = false;
+
+		if (runTimes != 0) {
+			String cont = getString(sc, "Would you like to continue? (y / n)");
+			contBoolean = cont.equalsIgnoreCase("y");
+		} else {
+			contBoolean = true;
+		}
+		return contBoolean;
+	}
 }
