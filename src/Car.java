@@ -1,4 +1,10 @@
-
+/**
+ * Car Object Class
+ * 
+ * @see java.lang.Object
+ * @author Jenna Price
+ * @version 1.0 Date: Nov/01/2017
+ */
 public class Car {
 
 	private String carMake;
@@ -6,8 +12,12 @@ public class Car {
 	private int year;
 	double price;
 
+	// empty constructor
 	public Car() {
-
+		carMake = "";
+		carModel = "";
+		year = 0;
+		price = 0.0;
 	}
 
 	public Car(String carMake, String carModel, int year, double price) {
@@ -17,6 +27,7 @@ public class Car {
 		this.price = price;
 	}
 
+	// Generated Getters and Setters
 	public String getCarMake() {
 		return carMake;
 	}
@@ -49,7 +60,7 @@ public class Car {
 		this.price = price;
 	}
 
-	@Override
+	@Override // Overidden toString that returns one long String
 	public String toString() {
 		String carInfo = carMake + " " + carModel + " " + Integer.toString(year) + " " + Double.toString(price);
 		return carInfo;
