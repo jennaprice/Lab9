@@ -1,0 +1,16 @@
+Ram
+2500
+2018
+45000
+Ford
+Explorer
+2018
+32000
+Chevrolet
+Camaro 
+2018
+37999
+Alfa Romeo
+Giulia Quadrifoglio
+2018
+730000
