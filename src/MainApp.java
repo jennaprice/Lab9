@@ -16,8 +16,7 @@ public class MainApp {
 		int loopCount = 0;
 		int loopCount2 = 0;
 		int carSelection;
-		// int year;
-		// double price;
+		boolean continueProgram = true;
 		Scanner scnr = new Scanner(System.in);
 		FileInputStream fileByteStream;
 		Scanner inFS = null;
@@ -47,7 +46,8 @@ public class MainApp {
 		carInventory.addUsedCars(inFS);
 
 		System.out.println("Welcome to the Grand Circus Motors Admin Console!");
-		while (Validator.doOnceContinueProgram(scnr, loopCount, "Would you like to choose a car? (y/n)", "y")) {// loopCount
+
+		while (continueProgram) {// loopCount
 			// makes
 			// sure itValidator.continueProgram(scnr, loopCount, "Would you like to choose a
 			// car? (y/n)", "y")
@@ -59,14 +59,16 @@ public class MainApp {
 			if (carSelection <= carInventory.getForSaleCars().size()) {
 				System.out.println(carInventory.getForSaleCars().get(carSelection - 1).toString());
 			} else {
-				break;
+				break;// it quits the loop if they choose quit
 			}
 			if (Validator.continueProgram(scnr, "Would you like to buy this car? (y/n)", "y")) {
 				System.out.println("Fantastic, our finance department will be in touch!");
 				carInventory.getForSaleCars().remove(carSelection - 1);
+				continueProgram = Validator.doOnceContinueProgram(scnr, loopCount,
+						"Would you like to look at another car? (y/n)", "y");// re-ups or quits the loop if they by a
+																				// car
 
 			}
-
 		}
 		System.out.println("Thank you for playing!");
 		scnr.close();

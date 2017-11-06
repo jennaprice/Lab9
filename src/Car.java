@@ -62,7 +62,7 @@ public class Car {
 
 	@Override // Overidden toString that returns one long String
 	public String toString() {
-		String carInfo = carMake + " " + carModel + " " + Integer.toString(year) + " $" + Double.toString(price);
+		String carInfo = carMake + " " + carModel + " \n\t" + Integer.toString(year) + "\t$" + Double.toString(price);
 		return carInfo;
 	}
 }
